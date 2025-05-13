@@ -6,7 +6,7 @@ public class Calculator {
         try {
             System.out.println(Calculator.divideWithException(3, 0));
         } catch (ArithmeticException e) {
-            System.out.println("You can't divide by zero");
+            System.err.println("You can't divide by zero");
         }
     }
 

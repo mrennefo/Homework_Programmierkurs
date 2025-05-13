@@ -3,6 +3,8 @@ import Homework5.Aufgabe2.*;
 
 public class ShippingInfo {
     String city;
+    int zip;
+    String country;
 
     public String getCity() {
         return city;
@@ -28,10 +30,9 @@ public class ShippingInfo {
         this.zip = zip;
     }
 
-    int zip;
-    String country;
+
     public ShippingInfo(String city, int zip, String country) throws MissingShippingInfoException{
-        if(city.equals("")){
+        if(city.equals("") || city == null){
             throw new MissingShippingInfoException("Missing City!");
         } else {
             this.city = city;
